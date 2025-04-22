@@ -1,1 +1,0 @@
-# inspiracao-consultoria
