@@ -65,7 +65,8 @@
   }
 
   .perfil img {
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
     border-radius: 8px;
   }
 
@@ -202,8 +203,22 @@
     background-color: #d96c00;
   }
   
+  @media (max-width: 960px) {
+    
+    .container{
+        margin: 0 24px;
+    }
+
+    .perfil{
+        align-items: center;
+    }
+  }
+
+  
 
   @media (max-width: 600px) {
+
+
     header h1 {
       font-size: 1.4rem;
     }
