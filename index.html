@@ -2,150 +2,487 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kleber Eduardo da Silva</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://kit.fontawesome.com/0efc108669.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inspirAção - Conectando propósito, cultura organizacional e impacto social</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-  <header>
-    <h1>Conectando propósito, cultura organizacional e impacto social</h1>
-    <p>Com mais de 20 anos de experiência, apoio organizações na construção de programas de voluntariado
-      transformadores, que geram pertencimento, fortalecem marcas e desenvolvem comunidades.</p>
-    <a class="btn" href="#servicos">Conheça meu trabalho</a>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>inspirAção</h2>
+                </div>
 
-  <main class="container">
-    <section class="perfil">
-      <img src="./img/foto Kleber.jpeg" alt="Foto de Kleber Eduardo da Silva">
-      <div class="perfil-info">
-        <h2>Quem é Kleber Eduardo da Silva</h2>
-        <p>Sou consultor em responsabilidade social corporativa e voluntariado empresarial, com mais de duas décadas de
-          experiência no desenvolvimento de estratégias e ações de engajamento social no ambiente corporativo.
-          Sou graduado em Administração de Empresas e pós-graduado em Psicologia Organizacional e do Trabalho pela
-          Universidade Presbiteriana Mackenzie. Acredito profundamente no poder transformador das pessoas — quando
-          compartilhamos habilidades e experiências, criamos soluções reais para desafios sociais.
-          Meu trabalho se baseia em conectar propósito e cultura organizacional a ações de impacto social, por meio de
-          uma escuta ativa, práticas colaborativas e desenvolvimento de iniciativas personalizadas.
-          “Vejo as empresas que se preocupam com a comunidade e incentivam o voluntariado como grandes aliadas no
-          fortalecimento da sociedade e no desenvolvimento humano.”
-        </p>
-      </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#consultoria" class="nav-link">Consultoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicos" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experiencia" class="nav-link">Experiência</a>
+                    </li>
+                </ul>
+
+                <div class="nav-cta">
+                    <a href="#contato" class="btn-cta">Fale comigo!</a>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Conectando propósito, cultura organizacional e impacto social
+                </h1>
+                <p class="hero-subtitle">
+                    Com mais de 20 anos de experiência, apoio organizações na construção de programas de voluntariado
+                    transformadores, que geram pertencimento, fortalecem marcas e desenvolvem comunidades.
+                </p>
+                <a href="#sobre" class="btn-primary">Conheça meu trabalho!</a>
+            </div>
+        </div>
     </section>
 
-    <section class="servicos" id="servicos">
-      <h3>Serviços</h3>
-      <div class="grid">
-        <div class="servico">
-          <div class="servicos-head">
-            <div class="servico-icon">
-              <i class="fas fa-tasks"></i>
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="img/foto Kleber.jpeg" alt="Kleber Eduardo da Silva" class="profile-img">
+                </div>
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre mim</h2>
+                    <p class="sobre-description">
+                        Sou Kleber Eduardo da Silva, consultor em responsabilidade social corporativa e voluntariado
+                        empresarial, com mais de 20 anos de experiência na criação e implementação de estratégias de
+                        engajamento social no ambiente corporativo. Sou graduado em Administração de Empresas e
+                        pós-graduado em Psicologia Organizacional e do Trabalho pela Universidade Presbiteriana
+                        Mackenzie.
+                    </p>
+                    <p class="sobre-description">
+                        Ao longo da minha trajetória, sempre acreditei no poder transformador das pessoas — quando
+                        compartilhamos habilidades e experiências, somos capazes de criar soluções reais para os
+                        desafios sociais que nos cercam. Acredito que empresas que se preocupam com a comunidade e
+                        incentivam o voluntariado são grandes aliadas na construção de uma sociedade mais justa e no
+                        desenvolvimento humano.
+                    </p>
+                </div>
             </div>
-            <p>Gestão Técnica e Institucional</p>
-          </div>
-          <p>Criação, estruturação e acompanhamento de programas de voluntariado empresarial, alinhados à estratégia
-            organizacional e às demandas sociais do território.</p>
         </div>
-        <div class="servico">
-          <div class="servicos-head">
-            <div class="servico-icon">
-              <i class="fa-solid fa-school"></i>
-            </div>
-            <p>Formação e Acompanhamento</p>
-          </div>
-          <p>Criação, estruturação e acompanhamento de programas de voluntariado empresarial, alinhados à estratégia
-            organizacional e às demandas sociais do território.</p>
-        </div>
-        <div class="servico">
-          <div class="servicos-head">
-            <div class="servico-icon">
-              <i class="fa-solid fa-school"></i>
-            </div>
-            <p>Treinamentos e sensibilização</p>
-          </div>
-          <p>Criação, estruturação e acompanhamento de programas de voluntariado empresarial, alinhados à estratégia
-            organizacional e às demandas sociais do território.</p>
-        </div>
-        <!--  -->
-        <div class="servico">
-          <div class="servicos-head">
-            <div class="servico-icon">
-              <i class="fa-solid fa-people-roof"></i>
-            </div>
-            <p>Gerenciamento de Voluntariado</p>
-          </div>
-          <p>Criação, estruturação e acompanhamento de programas de voluntariado empresarial, alinhados à estratégia
-            organizacional e às demandas sociais do território.</p>
-        </div>
-        
-      </div>
     </section>
 
-    <section class="portfolio">
-      <h3>Portfólio</h3>
-      <p>Ao longo da minha trajetória, tive a oportunidade de atuar com empresas, institutos e organizações de referência, contribuindo para o fortalecimento de iniciativas de voluntariado corporativo e impacto social.</p>
-      <br>
-      <div class="grid-logos">
-        <div class="portfolio-item"><img src="./img/logo-01.svg" alt="MediCare"></div>
-        <div class="portfolio-item"><img src="./img/logo-02.png" alt="EcoVista"></div>
-        <div class="portfolio-item"><img src="./img/logo-03.png" alt="Horizon School"></div>
-        <div class="portfolio-item"><img src="./img/logo-04.png" alt="Horizon School"></div>
-        <div class="portfolio-item"><img src="./img/logo-05.avif" alt="Horizon School"></div>
-        <div class="portfolio-item"><img src="./img/logo-06.png" alt="Horizon School"></div>
-      </div>
+    <!-- Consultoria Section -->
+    <section id="consultoria" class="consultoria">
+        <div class="container">
+            <div class="consultoria-content">
+                <div class="consultoria-text">
+                    <h2 class="section-title">Consultoria com propósito</h2>
+                    <p class="consultoria-description">
+                        Apoio empresas a traduzirem seu propósito em ações concretas de impacto social, por meio de
+                        programas de voluntariado estruturados que conectam colaboradores, fortalecem a cultura
+                        organizacional e geram valor compartilhado para todos os stakeholders.
+                    </p>
+                    <div class="consultoria-features">
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Estratégia Personalizada</h3>
+                            <p>Desenvolvimento de programas únicos alinhados ao propósito da empresa</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Engajamento Real</h3>
+                            <p>Criação de experiências significativas que conectam colaboradores</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Impacto Mensurável</h3>
+                            <p>Métricas claras para acompanhar resultados e evolução</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="consultoria-image">
+                    <img src="./img/inspira-logo.jpg" alt="Consultoria" class="consultoria-img">
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Serviços Section -->
+    <!-- <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title text-center">Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Diagnóstico e Planejamento</h3>
+                    <p>Análise da cultura organizacional e desenvolvimento de estratégias de voluntariado alinhadas ao propósito da empresa.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Implementação de Programas</h3>
+                    <p>Criação e execução de programas de voluntariado estruturados com metodologias comprovadas.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Capacitação e Treinamento</h3>
+                    <p>Formação de equipes internas para gestão autônoma de programas de responsabilidade social.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Monitoramento e Avaliação</h3>
+                    <p>Acompanhamento contínuo dos resultados e otimização dos programas para máximo impacto.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title text-center">Serviços</h2>
+            <div class="servicos-grid">
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Gestão Técnica e Institucional</h3>
+                    <p>Criação e acompanhamento de programas de voluntariado alinhados à estratégia da empresa e às
+                        demandas sociais do território.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Formação de Comitês</h3>
+                    <p>Fortalecimento de comitês de voluntariado com foco em autonomia, cultura organizacional e
+                        protagonismo dos colaboradores.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Treinamento de Voluntários</h3>
+                    <p>Formações personalizadas para preparar e inspirar voluntários, estimulando empatia, colaboração e
+                        engajamento social.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Encontros com Lideranças</h3>
+                    <p>Reuniões estratégicas com gestores para fortalecer o papel do voluntariado na cultura e no clima
+                        organizacional.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Rodas de Diálogo Comunitárias</h3>
+                    <p>Facilitação de encontros entre empresa e comunidade para construção coletiva de soluções e
+                        fortalecimento de vínculos.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Palestras Online e Presenciais</h3>
+                    <p>Condução de palestras sobre voluntariado, responsabilidade social e desenvolvimento comunitário,
+                        adaptadas ao público.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Campanhas e Eventos</h3>
+                    <p>Criação de campanhas internas e eventos de engajamento que ampliam a participação dos
+                        colaboradores no programa.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas de Gestão</h3>
+                    <p>Desenvolvimento e uso de ferramentas que apoiam a mensuração, acompanhamento e melhoria dos
+                        programas de voluntariado.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Soluções Sob Medida</h3>
+                    <p>Desenvolvimento de estratégias e ações personalizadas de voluntariado, adaptadas às necessidades
+                        específicas da organização.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Section -->
+    <section id="experiencia" class="experiencia">
+        <div class="container">
+            <h2 class="section-title text-center">Experiência</h2>
+            <div class="experiencia-stats">
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Empresas Atendidas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50k+</div>
+                    <div class="stat-label">Voluntários Engajados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Projetos Realizados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Outra Section -->
+    <section id="portfolio" class="servicos">
+        <div class="container">
+            <h2 class="section-title text-center">Experiência que gera confiança</h2>
+            <p class="text-center" style="max-width:720px; margin: 0 auto 60px;">
+                Ao longo da minha trajetória, tive a oportunidade de atuar com empresas, institutos e organizações de
+                referência, contribuindo para o fortalecimento de iniciativas de voluntariado corporativo e impacto
+                social.
+            </p>
+            <div  class="servicos-grid">
+
+                <div id="outra" class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-01.svg" alt="MediCare" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>MediCare</h3>
+                    <p>Gestão dos Pilares de Comunidade e Meio Ambiente. Acompanhamento e participação na gestão do
+                        programa Escritório Escola e apoio ao programa de Qualidade de Vida e PCDs.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-03.png" alt="Horizon School" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Holding Mover</h3>
+                    <p>Gestão do programa de voluntariado, dando suporte as ações de voluntariado de todas as empresas
+                        da holding Mover, com planejamento, monitoramento, realização de campanhas e gestão do portal.
+                    </p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-04.png" alt="Programa Dia do Bem Fazer"
+                            style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Programa Dia do Bem Fazer</h3>
+                    <p>Gestão de programa de voluntariado, campanhas e evento, comitês externos, articulação de projetos
+                        sociais e desenvolvimento comunitário em diversas localidades.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-05.avif" alt="Mentoria" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Programa de Mentoria</h3>
+                    <p>Parceria na implementação e gestão de programa de mentoria para jovens das organizações sociais:
+                        Projeto Arrastão, Projeto Casulo e Obra do Berço.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-06.png" alt="CBVE" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Conselho Brasileiro de Voluntariado Empresarial</h3>
+                    <p>Atuação como parceiro em iniciativas de fomento ao voluntariado empresarial no Brasil, com
+                        participação em fóruns, eventos e publicações, como membro do comitê gestor.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-07.png" alt="Formações" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Formações e Encontros</h3>
+                    <p>Condução de formações e encontros com colaboradores para mobilização e sensibilização em ações
+                        sociais.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-08.webp" alt="Consultoria Voluntária" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Consultoria Voluntária</h3>
+                    <p>Atuação como consultor voluntário dando suporte à equipe em mobilização, atração e retenção de
+                        voluntários durante a pandemia.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-09.png" alt="Formações e Encontros" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Formações e Encontros</h3>
+                    <p>Condução de formações e encontros com colaboradores para mobilização e sensibilização em ações
+                        sociais.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <img src="./img/logo-11.webp" alt="Parceiro Estratégico" style="width: 48px; height: 48px;" />
+                    </div>
+                    <h3>Parceiro Estratégico</h3>
+                    <p>Parceiro estratégico e Head Comercial e de Consultorias.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contato Section -->
     <section id="contato" class="contato">
-      <h2>Fale comigo</h2>
-      <p>Tem um projeto ou dúvida? Me mande uma mensagem!</p>
-      
-      <form action="https://formspree.io/f/myzwywda" method="POST">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required />
-    
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-    
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-    
-        <!-- Campo invisível para bots -->
-        <input type="text" name="_gotcha" style="display:none" />
-    
-        <!-- Mensagem de resposta -->
-        <p class="form-status" style="display: none;"></p>
-    
-        <button type="submit">Enviar</button>
-      </form>
+        <div class="container">
+            <h2 class="section-title text-center">Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <h3>Vamos conversar sobre seu projeto?</h3>
+                    <p>Estou aqui para ajudar sua empresa a criar programas de voluntariado que realmente fazem a
+                        diferença.</p>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kesilva@inspiracaoconsultoria.com</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+55 11 94548-0896</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Osasco, SP</span>
+                    </div>
+                </div>
+                <form class="contato-form">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="empresa" name="empresa" placeholder="Sua empresa">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
     </section>
-    
-  </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>inspirAção</h3>
+                    <p>Conectando propósito e impacto social</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre mim</a></li>
+                        <li><a href="#consultoria">Consultoria</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#experiencia">Experiência</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 inspirAção Consultoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<script>
-  const form = document.querySelector("form");
-  const statusMsg = document.querySelector(".form-status");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { Accept: "application/json" },
-    });
-
-    if (response.ok) {
-      statusMsg.textContent = "Mensagem enviada com sucesso!";
-      statusMsg.style.display = "block";
-      form.reset();
-    } else {
-      statusMsg.textContent = "Algo deu errado. Tente novamente.";
-      statusMsg.style.display = "block";
-      statusMsg.style.color = "red";
-    }
-  });
-</script>
 
 </html>
