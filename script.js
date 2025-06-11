@@ -1,9 +1,9 @@
 // Menu hamburger functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Header background change on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
         header.style.background = 'linear-gradient(135deg, rgba(255, 107, 53, 0.95) 0%, rgba(211, 47, 47, 0.95) 100%)';
@@ -109,30 +109,35 @@ document.querySelector('.contato-form').addEventListener('submit', async functio
     const empresa = document.getElementById('empresa').value;
     const mensagem = document.getElementById('mensagem').value;
 
-    const dados = { nome, email, empresa, mensagem };
+    const dados = {
+        "Nome": nome,
+        "Email": email,
+        "Empresa": empresa,
+        "Mensagem": mensagem
+    };
 
-    const url = "https://script.google.com/macros/s/AKfycbwE83IBRwGgWRrUwlRn7B3qIhGB8fwiR8af_M6NI252wR1sCdIr2YWoIrrQaVcmSqBRmQ/exec";
     console.log(dados)
     try {
-      const response = await fetch(url, {
-        method: "POST",
-        body: JSON.stringify(dados),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
+        const res = await fetch('https://script.google.com/macros/s/AKfycbwE83IBRwGgWRrUwlRn7B3qIhGB8fwiR8af_M6NI252wR1sCdIr2YWoIrrQaVcmSqBRmQ/exec', {
+            method: 'POST',
+            body: JSON.stringify(dados),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
 
-      if (response.ok) {
-        alert("Mensagem enviada com sucesso!");
-        e.target.reset();
-      } else {
-        alert("Erro ao enviar. Tente novamente.");
-      }
+        if (res.ok) {
+            window.alert("Deu certo!")
+        } else {
+            const errorData = await res.json();
+            window.alert("Deu errado!", errorData)
+        }
     } catch (error) {
-      alert("Erro de conexão. Verifique sua internet.");
-      console.error(error);
+        console.error(error);
     }
-  });
+});
+
+
 
 
 // Intersection Observer for animations
@@ -141,7 +146,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -151,9 +156,9 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe elements for animation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const animatedElements = document.querySelectorAll('.servico-card, .stat, .feature');
-    
+
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -166,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
-    
+
     function updateCounter() {
         start += increment;
         if (start < target) {
@@ -176,12 +181,12 @@ function animateCounter(element, target, duration = 2000) {
             element.textContent = target + '+';
         }
     }
-    
+
     updateCounter();
 }
 
 // Trigger counter animation when stats section is visible
-const statsObserver = new IntersectionObserver(function(entries) {
+const statsObserver = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
@@ -197,7 +202,7 @@ const statsObserver = new IntersectionObserver(function(entries) {
     });
 }, { threshold: 0.5 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const experienciaSection = document.querySelector('.experiencia-stats');
     if (experienciaSection) {
         statsObserver.observe(experienciaSection);
@@ -206,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Add loading animation
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.classList.add('loaded');
 });
 
