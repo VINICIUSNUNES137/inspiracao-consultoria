@@ -42,102 +42,64 @@ window.addEventListener('scroll', function () {
 });
 
 // Form submission
-// document.querySelector('.contato-form').addEventListener('submit', function(e) {
-//     e.preventDefault();
-
-//     const formData = new FormData(this);
-//     const nome = formData.get('nome');
-//     const email = formData.get('email');
-//     const empresa = formData.get('empresa');
-//     const mensagem = formData.get('mensagem');
-
-//     if (!nome || !email || !mensagem) {
-//         alert('Por favor, preencha todos os campos obrigatórios.');
-//         return;
-//     }
-
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     if (!emailRegex.test(email)) {
-//         alert('Por favor, insira um e-mail válido.');
-//         return;
-//     }
-
-//     const submitButton = this.querySelector('button[type="submit"]');
-//     const originalText = submitButton.textContent;
-
-//     submitButton.textContent = 'Enviando...';
-//     submitButton.disabled = true;
-
-//     // Preparar dados para enviar no corpo JSON
-//     const dataToSend = {
-//         nome,
-//         email,
-//         empresa,
-//         mensagem
-//     };
-
-//     fetch('http://localhost:5678/webhook/0d19b485-1044-476a-b52e-723b52e0c272', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(dataToSend)
-//     })
-//     .then(response => {
-//         if (!response.ok) throw new Error('Erro ao enviar formulário');
-//         return response.json(); // ou response.text() conforme sua resposta esperada
-//     })
-//     .then(data => {
-//         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-//         this.reset();
-//     })
-//     .catch(error => {
-//         alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
-//         console.error(error);
-//     })
-//     .finally(() => {
-//         submitButton.textContent = originalText;
-//         submitButton.disabled = false;
-//     });
-// });
-
-document.querySelector('.contato-form').addEventListener('submit', async function (e) {
+document.querySelector('.contato-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const empresa = document.getElementById('empresa').value;
-    const mensagem = document.getElementById('mensagem').value;
+    const formData = new FormData(this);
+    const nome = formData.get('nome');
+    const email = formData.get('email');
+    const empresa = formData.get('empresa');
+    const mensagem = formData.get('mensagem');
 
-    const dados = {
-        "Nome": nome,
-        "Email": email,
-        "Empresa": empresa,
-        "Mensagem": mensagem
+    if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, insira um e-mail válido.');
+        return;
+    }
+
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+
+    submitButton.textContent = 'Enviando...';
+    submitButton.disabled = true;
+
+    // Preparar dados para enviar no corpo JSON
+    const dataToSend = {
+        nome,
+        email,
+        empresa,
+        mensagem
     };
 
-    console.log(dados)
-    try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbwE83IBRwGgWRrUwlRn7B3qIhGB8fwiR8af_M6NI252wR1sCdIr2YWoIrrQaVcmSqBRmQ/exec', {
-            method: 'POST',
-            body: JSON.stringify(dados),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (res.ok) {
-            window.alert("Deu certo!")
-        } else {
-            const errorData = await res.json();
-            window.alert("Deu errado!", errorData)
-        }
-    } catch (error) {
+    fetch('https://viralmais.app.n8n.cloud/webhook/d728cc17-3de3-4c4c-8cfb-f8d1053568b9', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataToSend)
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Erro ao enviar formulário');
+        return response.json(); // ou response.text() conforme sua resposta esperada
+    })
+    .then(data => {
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        this.reset();
+    })
+    .catch(error => {
+        alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
         console.error(error);
-    }
+    })
+    .finally(() => {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
 });
-
-
 
 
 // Intersection Observer for animations
