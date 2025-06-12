@@ -48,6 +48,7 @@ document.querySelector('.contato-form').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     const nome = formData.get('nome');
     const email = formData.get('email');
+    const telefone = formData.get('telefone');
     const empresa = formData.get('empresa');
     const mensagem = formData.get('mensagem');
 
@@ -72,10 +73,12 @@ document.querySelector('.contato-form').addEventListener('submit', function(e) {
     const dataToSend = {
         nome,
         email,
+        telefone,
         empresa,
         mensagem
     };
-
+    // teste 
+    // fetch('https://viralmais.app.n8n.cloud/webhook-test/d728cc17-3de3-4c4c-8cfb-f8d1053568b9', {
     fetch('https://viralmais.app.n8n.cloud/webhook/d728cc17-3de3-4c4c-8cfb-f8d1053568b9', {
         method: 'POST',
         headers: {
